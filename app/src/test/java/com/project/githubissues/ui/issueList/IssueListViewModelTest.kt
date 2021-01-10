@@ -54,7 +54,7 @@ class IssueListViewModelTest {
     }
 
     @Test
-    fun `should hide Progress Bar when issues are fetched successfully`() {
+    fun `should post the issues when issues are fetched successfully`() {
         success()
 
         systemUnderTest.getIssues()
@@ -63,7 +63,7 @@ class IssueListViewModelTest {
     }
 
     @Test
-    fun `should hide Progress Bar when issues are are not fetched succesfully due ro response error`() {
+    fun `should post the fetch error  when issues are are not fetched succesfully due ro response error`() {
         responseError()
 
         systemUnderTest.getIssues()
@@ -72,7 +72,7 @@ class IssueListViewModelTest {
     }
 
     @Test
-    fun `should hide Progress Bar when issues are not fetched succesfully due to API Error`() {
+    fun `should post the fetch error when issues are not fetched succesfully due to API Error`() {
         failure()
 
         systemUnderTest.getIssues()
