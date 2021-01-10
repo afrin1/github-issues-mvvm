@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.project.githubissues.R
 import com.project.githubissues.model.database.IssueData
-import com.project.githubissues.model.issuelist.Issue
 import kotlinx.android.synthetic.main.issue_list_item.view.descriptionTextView
 import kotlinx.android.synthetic.main.issue_list_item.view.titleTextView
 import kotlinx.android.synthetic.main.issue_list_item.view.userTextView

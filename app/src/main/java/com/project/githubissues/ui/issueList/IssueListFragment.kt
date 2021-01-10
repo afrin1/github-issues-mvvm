@@ -13,7 +13,7 @@ import com.project.githubissues.R
 import com.project.githubissues.databinding.FragmentIssueListBinding
 import com.project.githubissues.model.database.IssueData
 import com.project.githubissues.model.database.IssuesListDatabase
-import com.project.githubissues.model.issuelist.IssueService
+import com.project.githubissues.model.service.IssueService
 import kotlinx.android.synthetic.main.fragment_issue_list.progressBar
 
 class IssueListFragment : Fragment() {

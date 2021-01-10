@@ -6,9 +6,9 @@ import androidx.lifecycle.MutableLiveData
 import com.nhaarman.mockitokotlin2.KArgumentCaptor
 import com.project.githubissues.model.database.IssueData
 import com.project.githubissues.model.database.IssuesListDatabaseDAO
-import com.project.githubissues.model.issuelist.Issue
-import com.project.githubissues.model.issuelist.IssueService
-import com.project.githubissues.model.issuelist.User
+import com.project.githubissues.model.service.Issue
+import com.project.githubissues.model.service.IssueService
+import com.project.githubissues.model.service.User
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.Request
 import okhttp3.ResponseBody

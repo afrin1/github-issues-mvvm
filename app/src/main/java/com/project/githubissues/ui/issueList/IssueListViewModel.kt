@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.project.githubissues.model.database.IssueData
 import com.project.githubissues.model.database.IssuesListDatabaseDAO
-import com.project.githubissues.model.issuelist.Issue
-import com.project.githubissues.model.issuelist.IssueService
+import com.project.githubissues.model.service.Issue
+import com.project.githubissues.model.service.IssueService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.Unconfined
 import kotlinx.coroutines.launch
