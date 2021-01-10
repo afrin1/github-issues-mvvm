@@ -1,4 +1,4 @@
-package com.project.githubissues.issueList
+package com.project.githubissues.issueList.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.LiveData
@@ -9,7 +9,6 @@ import com.project.githubissues.issueList.model.database.IssuesListDatabaseDAO
 import com.project.githubissues.issueList.model.service.Issue
 import com.project.githubissues.issueList.model.service.IssueService
 import com.project.githubissues.issueList.model.service.User
-import com.project.githubissues.issueList.ui.IssueListViewModel
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.Request
 import okhttp3.ResponseBody

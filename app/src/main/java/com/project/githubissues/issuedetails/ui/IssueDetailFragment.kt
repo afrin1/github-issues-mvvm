@@ -1,4 +1,4 @@
-package com.project.githubissues.issuedetails
+package com.project.githubissues.issuedetails.ui
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.project.githubissues.R
+import com.project.githubissues.issuedetails.viewmodel.IssueDetailViewModel
 
 class IssueDetailFragment : Fragment() {
 

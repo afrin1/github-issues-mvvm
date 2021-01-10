@@ -12,10 +12,12 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.project.githubissues.R
 import com.project.githubissues.databinding.FragmentIssueListBinding
+import com.project.githubissues.issueList.viewmodel.IssueListViewModel
+import com.project.githubissues.issueList.viewmodel.IssueListViewModelFactory
 import com.project.githubissues.issueList.model.database.IssueData
 import com.project.githubissues.issueList.model.database.IssuesListDatabase
 import com.project.githubissues.issueList.model.service.IssueService
-import com.project.githubissues.issuedetails.IssueDetailActivity
+import com.project.githubissues.issuedetails.ui.IssueDetailActivity
 import kotlinx.android.synthetic.main.fragment_issue_list.progressBar
 
 class IssueListFragment : Fragment() {

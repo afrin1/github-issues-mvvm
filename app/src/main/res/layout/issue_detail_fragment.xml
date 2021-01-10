@@ -5,7 +5,7 @@
     android:id="@+id/issue_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".issuedetails.IssueDetailFragment">
+    tools:context=".issuedetails.ui.IssueDetailFragment">
 
     <TextView
         android:id="@+id/message"

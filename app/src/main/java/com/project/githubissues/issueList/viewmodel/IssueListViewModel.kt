@@ -1,4 +1,4 @@
-package com.project.githubissues.issueList.ui
+package com.project.githubissues.issueList.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
