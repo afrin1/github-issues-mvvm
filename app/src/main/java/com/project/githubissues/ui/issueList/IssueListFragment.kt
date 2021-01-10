@@ -11,7 +11,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.project.githubissues.R
 import com.project.githubissues.databinding.FragmentIssueListBinding
-import com.project.githubissues.model.issuelist.Issue
+import com.project.githubissues.model.database.IssueData
+import com.project.githubissues.model.database.IssuesListDatabase
 import com.project.githubissues.model.issuelist.IssueService
 import kotlinx.android.synthetic.main.fragment_issue_list.progressBar
 
@@ -24,7 +25,7 @@ class IssueListFragment : Fragment() {
     private lateinit var viewModel: IssueListViewModel
     private lateinit var adapter: IssueAdapter
 
-        override fun onCreateView(
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -38,9 +39,11 @@ class IssueListFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val viewModelFactory = IssueListViewModelFactory(IssueService.create())
+        val dataSource =
+            this.activity?.let { IssuesListDatabase.getInstance(it.applicationContext).issuesListDatabaseDAO }
+        val viewModelFactory = IssueListViewModelFactory(IssueService.create(), dataSource!!)
         viewModel = ViewModelProvider(this, viewModelFactory).get(IssueListViewModel::class.java)
-        // TODO: Use the ViewModel
+
         setIssuesObserver()
         setFetchErrorObserver()
 
@@ -69,7 +72,7 @@ class IssueListFragment : Fragment() {
         })
     }
 
-    private fun setIssuesToListView(it: List<Issue>) {
+    private fun setIssuesToListView(it: List<IssueData>) {
         adapter.data = it
     }
 

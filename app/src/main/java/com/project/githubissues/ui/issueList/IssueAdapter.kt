@@ -5,13 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.project.githubissues.R
+import com.project.githubissues.model.database.IssueData
 import com.project.githubissues.model.issuelist.Issue
 import kotlinx.android.synthetic.main.issue_list_item.view.descriptionTextView
 import kotlinx.android.synthetic.main.issue_list_item.view.titleTextView
 import kotlinx.android.synthetic.main.issue_list_item.view.userTextView
 
 class IssueAdapter : RecyclerView.Adapter<IssueItemViewHolder>() {
-    var data = listOf<Issue>()
+    var data = listOf<IssueData>()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -35,7 +36,7 @@ class IssueAdapter : RecyclerView.Adapter<IssueItemViewHolder>() {
         holder.view.titleTextView.text = issue.title
         holder.view.descriptionTextView.text = "${issue.description.take(200)} $continuation"
         holder.view.userTextView.text =
-            "last updated on ${issue.updatedAt.substring(0, 10)} by ${issue.user.username}"
+            "last updated on ${issue.updatedAt.substring(0, 10)} by ${issue.username}"
     }
 }
 
