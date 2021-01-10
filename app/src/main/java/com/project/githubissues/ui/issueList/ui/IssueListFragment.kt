@@ -1,5 +1,6 @@
-package com.project.githubissues.ui.issueList
+package com.project.githubissues.ui.issueList.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +12,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.project.githubissues.R
 import com.project.githubissues.databinding.FragmentIssueListBinding
-import com.project.githubissues.model.database.IssueData
-import com.project.githubissues.model.database.IssuesListDatabase
-import com.project.githubissues.model.service.IssueService
+import com.project.githubissues.ui.issueList.model.database.IssueData
+import com.project.githubissues.ui.issueList.model.database.IssuesListDatabase
+import com.project.githubissues.ui.issueList.model.service.IssueService
+import com.project.githubissues.ui.issuedetails.IssueDetailActivity
 import kotlinx.android.synthetic.main.fragment_issue_list.progressBar
 
 class IssueListFragment : Fragment() {
@@ -32,7 +34,7 @@ class IssueListFragment : Fragment() {
         val binding: FragmentIssueListBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_issue_list, container, false
         )
-        adapter = IssueAdapter()
+        adapter = IssueAdapter(issueListListener())
         binding.recyclerView.adapter = adapter
         return binding.root
     }
@@ -48,6 +50,15 @@ class IssueListFragment : Fragment() {
         setFetchErrorObserver()
 
         viewModel.getIssues()
+    }
+
+    private fun issueListListener() = IssueListListener { id ->
+        activity?.let{
+            val intent = Intent (it, IssueDetailActivity::class.java).apply {
+                putExtra("ISSUE_ID", id)
+            }
+            it.startActivity(intent)
+        }
     }
 
     private fun setFetchErrorObserver() {

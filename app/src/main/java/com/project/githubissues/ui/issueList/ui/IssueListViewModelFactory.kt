@@ -1,9 +1,9 @@
-package com.project.githubissues.ui.issueList
+package com.project.githubissues.ui.issueList.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.project.githubissues.model.database.IssuesListDatabaseDAO
-import com.project.githubissues.model.service.IssueService
+import com.project.githubissues.ui.issueList.model.database.IssuesListDatabaseDAO
+import com.project.githubissues.ui.issueList.model.service.IssueService
 
 /**
  * This is pretty much boiler plate code for a ViewModel Factory.

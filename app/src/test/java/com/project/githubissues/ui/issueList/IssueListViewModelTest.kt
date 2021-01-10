@@ -4,11 +4,12 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.nhaarman.mockitokotlin2.KArgumentCaptor
-import com.project.githubissues.model.database.IssueData
-import com.project.githubissues.model.database.IssuesListDatabaseDAO
-import com.project.githubissues.model.service.Issue
-import com.project.githubissues.model.service.IssueService
-import com.project.githubissues.model.service.User
+import com.project.githubissues.ui.issueList.model.database.IssueData
+import com.project.githubissues.ui.issueList.model.database.IssuesListDatabaseDAO
+import com.project.githubissues.ui.issueList.model.service.Issue
+import com.project.githubissues.ui.issueList.model.service.IssueService
+import com.project.githubissues.ui.issueList.model.service.User
+import com.project.githubissues.ui.issueList.ui.IssueListViewModel
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.Request
 import okhttp3.ResponseBody
@@ -47,12 +48,20 @@ class IssueListViewModelTest {
             "description",
             "updated at",
             "username",
-            "avatar url"
+            "avatar url",
+            "comments url"
         )
     )
 
     private fun generateIssues(): List<Issue> {
-        val issue = Issue(1, "title", "description", "updated at", User("username", "avatar url"))
+        val issue = Issue(
+            1,
+            "title",
+            "description",
+            "updated at",
+            User("username", "avatar url"),
+            "comments url"
+        )
         return listOf(issue)
     }
 

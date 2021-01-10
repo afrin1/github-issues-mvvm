@@ -1,4 +1,4 @@
-package com.project.githubissues.model.database
+package com.project.githubissues.ui.issueList.model.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -22,5 +22,8 @@ data class IssueData(
     var username: String = "",
 
     @ColumnInfo(name = "avatar_url")
-    var avatarUrl: String = ""
+    var avatarUrl: String = "",
+
+    @ColumnInfo(name = "comments_url")
+    var commentsUrl: String = ""
 )

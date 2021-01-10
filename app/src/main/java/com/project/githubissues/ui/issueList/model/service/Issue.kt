@@ -1,4 +1,4 @@
-package com.project.githubissues.model.service
+package com.project.githubissues.ui.issueList.model.service
 
 import com.google.gson.annotations.SerializedName
 
@@ -9,5 +9,7 @@ data class Issue(
     val description: String,
     @SerializedName("updated_at")
     val updatedAt: String,
-    val user: User
+    val user: User,
+    @SerializedName("comments_url")
+    val commentsUrl: String
 )

@@ -1,4 +1,4 @@
-package com.project.githubissues.model.service
+package com.project.githubissues.ui.issueList.model.service
 
 import com.google.gson.annotations.SerializedName
 

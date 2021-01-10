@@ -1,8 +1,8 @@
-package com.project.githubissues
+package com.project.githubissues.ui.issueList.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.project.githubissues.ui.issueList.IssueListFragment
+import com.project.githubissues.R
 
 class MainActivity : AppCompatActivity() {
 

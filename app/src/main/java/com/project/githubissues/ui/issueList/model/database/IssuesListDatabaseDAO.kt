@@ -1,4 +1,4 @@
-package com.project.githubissues.model.database
+package com.project.githubissues.ui.issueList.model.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

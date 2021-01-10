@@ -1,12 +1,12 @@
-package com.project.githubissues.ui.issueList
+package com.project.githubissues.ui.issueList.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.project.githubissues.model.database.IssueData
-import com.project.githubissues.model.database.IssuesListDatabaseDAO
-import com.project.githubissues.model.service.Issue
-import com.project.githubissues.model.service.IssueService
+import com.project.githubissues.ui.issueList.model.database.IssueData
+import com.project.githubissues.ui.issueList.model.database.IssuesListDatabaseDAO
+import com.project.githubissues.ui.issueList.model.service.Issue
+import com.project.githubissues.ui.issueList.model.service.IssueService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.Unconfined
 import kotlinx.coroutines.launch
@@ -70,7 +70,8 @@ class IssueListViewModel(issueService: IssueService, issuesListDatabaseDAO: Issu
                     item.description,
                     item.updatedAt,
                     item.user.username,
-                    item.user.avatar
+                    item.user.avatar,
+                    item.commentsUrl
                 )
             )
         }
