@@ -1,4 +1,4 @@
-package com.project.githubissues.ui.issueList.model.database
+package com.project.githubissues.issueList.model.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

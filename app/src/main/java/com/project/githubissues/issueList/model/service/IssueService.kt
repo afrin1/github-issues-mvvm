@@ -1,4 +1,4 @@
-package com.project.githubissues.ui.issueList.model.service
+package com.project.githubissues.issueList.model.service
 
 import okhttp3.OkHttpClient
 import retrofit2.Call

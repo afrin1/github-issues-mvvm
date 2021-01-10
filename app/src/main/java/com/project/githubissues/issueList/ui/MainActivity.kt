@@ -1,4 +1,4 @@
-package com.project.githubissues.ui.issueList.ui
+package com.project.githubissues.issueList.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

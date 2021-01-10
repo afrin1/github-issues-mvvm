@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GithubIssues">
-        <activity android:name=".ui.issuedetails.IssueDetailActivity"></activity>
-        <activity android:name=".ui.issueList.ui.MainActivity">
+        <activity android:name="com.project.githubissues.issuedetails.IssueDetailActivity"></activity>
+        <activity android:name="com.project.githubissues.issueList.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.project.githubissues.ui.issueList.ui
+package com.project.githubissues.issueList.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,10 +12,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.project.githubissues.R
 import com.project.githubissues.databinding.FragmentIssueListBinding
-import com.project.githubissues.ui.issueList.model.database.IssueData
-import com.project.githubissues.ui.issueList.model.database.IssuesListDatabase
-import com.project.githubissues.ui.issueList.model.service.IssueService
-import com.project.githubissues.ui.issuedetails.IssueDetailActivity
+import com.project.githubissues.issueList.model.database.IssueData
+import com.project.githubissues.issueList.model.database.IssuesListDatabase
+import com.project.githubissues.issueList.model.service.IssueService
+import com.project.githubissues.issuedetails.IssueDetailActivity
 import kotlinx.android.synthetic.main.fragment_issue_list.progressBar
 
 class IssueListFragment : Fragment() {

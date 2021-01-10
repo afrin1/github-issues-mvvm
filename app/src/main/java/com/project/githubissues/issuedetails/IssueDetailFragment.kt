@@ -1,4 +1,4 @@
-package com.project.githubissues.ui.issuedetails
+package com.project.githubissues.issuedetails
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle

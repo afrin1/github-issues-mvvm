@@ -1,4 +1,4 @@
-package com.project.githubissues.ui.issueList.ui
+package com.project.githubissues.issueList.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.project.githubissues.R
 import com.project.githubissues.databinding.IssueListItemBinding
-import com.project.githubissues.ui.issueList.model.database.IssueData
+import com.project.githubissues.issueList.model.database.IssueData
 import kotlinx.android.synthetic.main.issue_list_item.view.descriptionTextView
 import kotlinx.android.synthetic.main.issue_list_item.view.titleTextView
 import kotlinx.android.synthetic.main.issue_list_item.view.userTextView

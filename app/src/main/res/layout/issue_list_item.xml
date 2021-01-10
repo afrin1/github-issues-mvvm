@@ -57,10 +57,10 @@
 
         <variable
             name="issue"
-            type="com.project.githubissues.ui.issueList.model.database.IssueData"/>
+            type="com.project.githubissues.issueList.model.database.IssueData"/>
         <variable
             name="clickListener"
-            type="com.project.githubissues.ui.issueList.ui.IssueListListener" />
+            type="com.project.githubissues.issueList.ui.IssueListListener" />
 
     </data>
 </layout>

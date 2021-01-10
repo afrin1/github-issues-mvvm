@@ -1,9 +1,9 @@
-package com.project.githubissues.ui.issuedetails
+package com.project.githubissues.issuedetails
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.project.githubissues.ui.issueList.model.database.IssueData
+import com.project.githubissues.issueList.model.database.IssueData
 
 class IssueDetailViewModel : ViewModel() {
     private val _issues = MutableLiveData<List<IssueData>>()
