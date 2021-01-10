@@ -5,16 +5,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.project.githubissues.R
+import com.project.githubissues.model.issuelist.Issue
 import kotlinx.android.synthetic.main.issue_list_item.view.descriptionTextView
 import kotlinx.android.synthetic.main.issue_list_item.view.titleTextView
 import kotlinx.android.synthetic.main.issue_list_item.view.userTextView
 
-class IssueAdapter: RecyclerView.Adapter<IssueItemViewHolder>() {
-    var data =  listOf<Issue>()
-    set(value) {
-        field = value
-        notifyDataSetChanged()
-    }
+class IssueAdapter : RecyclerView.Adapter<IssueItemViewHolder>() {
+    var data = listOf<Issue>()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IssueItemViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -35,4 +36,4 @@ class IssueAdapter: RecyclerView.Adapter<IssueItemViewHolder>() {
     }
 }
 
-class IssueItemViewHolder(val view: View): RecyclerView.ViewHolder(view)
+class IssueItemViewHolder(val view: View) : RecyclerView.ViewHolder(view)

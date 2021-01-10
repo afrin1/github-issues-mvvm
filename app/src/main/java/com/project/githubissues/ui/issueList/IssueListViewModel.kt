@@ -3,20 +3,36 @@ package com.project.githubissues.ui.issueList
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.project.githubissues.model.issuelist.Issue
+import com.project.githubissues.model.issuelist.IssueService
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class IssueListViewModel : ViewModel() {
-    private val _issues = getIssues()
-    val isProgressVisible: Boolean = true
+class IssueListViewModel(issueService: IssueService) : ViewModel() {
+
+    private val _fetchError = MutableLiveData<Boolean>()
+    private val _issues = MutableLiveData<List<Issue>>()
+    private val issueService = issueService
+
     val issues: LiveData<List<Issue>>
         get() = _issues
+    val fetchError: LiveData<Boolean>
+        get() = _fetchError
 
-    private fun getIssues(): MutableLiveData<List<Issue>> {
-        var data: MutableLiveData<List<Issue>> = MutableLiveData()
-        val issue = Issue(1, "Title", "Description", "updated At", "username", "vatar url")
-        val issue2 =
-            Issue(2, "Title 2", "Description 2", "updated At 2", "username 2", "vatar url 2")
-        data.value = listOf(issue, issue2)
-        return data
+    fun getIssues() {
+        issueService.getIssuesList().enqueue(object : Callback<List<Issue>> {
+            override fun onResponse(call: Call<List<Issue>>, response: Response<List<Issue>>) {
+                if (response.isSuccessful) {
+                    _issues.postValue(response.body())
+                } else {
+                    _fetchError.postValue(true)
+                }
+            }
+
+            override fun onFailure(call: Call<List<Issue>>, t: Throwable) {
+                _fetchError.postValue(true)
+            }
+        })
     }
-
 }

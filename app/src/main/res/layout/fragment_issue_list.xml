@@ -14,7 +14,6 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:visibility="@{issueListViewModel.isProgressVisible ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +27,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:visibility="@{issueListViewModel.isProgressVisible ? View.GONE : View.VISIBLE}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,13 +35,4 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <data>
-
-        <import type="android.view.View" />
-
-        <variable
-            name="issueListViewModel"
-            type="com.project.githubissues.ui.issueList.IssueListViewModel" />
-    </data>
 </layout>
