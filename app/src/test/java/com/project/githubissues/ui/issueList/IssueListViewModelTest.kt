@@ -3,6 +3,7 @@ package com.project.githubissues.ui.issueList
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.project.githubissues.model.issuelist.Issue
 import com.project.githubissues.model.issuelist.IssueService
+import com.project.githubissues.model.issuelist.User
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.Request
 import okhttp3.ResponseBody
@@ -29,7 +30,7 @@ class IssueListViewModelTest {
     private val ISSUES_LIST = generateIssues()
 
     private fun generateIssues(): List<Issue> {
-        val issue = Issue(1, "Title", "Description", "updated at", "username", "avatar url")
+        val issue = Issue(1, "Title", "Description", "updated at", User("username", "avatar url"))
         return listOf(issue)
     }
 

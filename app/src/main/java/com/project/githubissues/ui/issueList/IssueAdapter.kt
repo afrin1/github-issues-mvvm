@@ -30,9 +30,12 @@ class IssueAdapter : RecyclerView.Adapter<IssueItemViewHolder>() {
 
     override fun onBindViewHolder(holder: IssueItemViewHolder, position: Int) {
         val issue = data[position]
+        val continuation = if (issue.description.length > 200) "..." else ""
+
         holder.view.titleTextView.text = issue.title
-        holder.view.descriptionTextView.text = issue.description
-        holder.view.userTextView.text = "updated at ${issue.updatedAt} by ${issue.userName}"
+        holder.view.descriptionTextView.text = "${issue.description.take(200)} $continuation"
+        holder.view.userTextView.text =
+            "last updated on ${issue.updatedAt.substring(0, 10)} by ${issue.user.username}"
     }
 }
 

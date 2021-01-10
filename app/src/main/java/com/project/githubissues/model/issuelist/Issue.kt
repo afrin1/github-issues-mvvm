@@ -9,8 +9,5 @@ data class Issue(
     val description: String,
     @SerializedName("updated_at")
     val updatedAt: String,
-    @SerializedName("login")
-    val userName: String,
-    @SerializedName("avatar_url")
-    val avatar: String
+    val user: User
 )
